@@ -28,8 +28,10 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
             Toast.makeText(context, smsMessageStr, Toast.LENGTH_SHORT).show();
 
             //this will update the UI with message
+            if(smsMessageStr=="Hi"){
             MainActivity inst = MainActivity.instance();
             inst.updateList(smsMessageStr);
+            }
         }
     }
 }
